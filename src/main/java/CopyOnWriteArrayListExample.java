@@ -4,15 +4,14 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.LongAdder;
 
 /**
  * @author wenda.zhuang
- * @Date 2020/5/8 8:52 PM
- * @Description ... E-mail   sis.nonacosa@gmail.com
+ * @Date 2020/5/9 00:12
+ * @Description CopyOnWriteArrayList 并发，概念：复制容器，add，指针指回去，但是会复制数组，数据量大不建议用，容易 young GC full GC
+ * @E-mail sis.nonacosa@gmail.com
  */
-public class LongAdderExample {
+public class CopyOnWriteArrayListExample {
 
 	// 请求总数
 	public static int clientTotal = 5000;
@@ -34,7 +33,7 @@ public class LongAdderExample {
 					update(count);
 					semaphore.release();
 				} catch (Exception e) {
-
+					System.out.println(e);
 				}
 				countDownLatch.countDown();
 			});
@@ -47,6 +46,4 @@ public class LongAdderExample {
 	private static void update(int i) {
 		list.add(i);
 	}
-
-
 }

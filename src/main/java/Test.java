@@ -1,26 +1,29 @@
+
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.LongAdder;
 
 /**
  * @author wenda.zhuang
- * @Date 2020/5/8 8:52 PM
- * @Description ... E-mail   sis.nonacosa@gmail.com
+ * @Date 2020/5/8 23:34
+ * @Description ...
+ * @E-mail sis.nonacosa@gmail.com
  */
-public class LongAdderExample {
-
+public class Test {
 	// 请求总数
 	public static int clientTotal = 5000;
 
 	// 同时并发执行的线程数
 	public static int threadTotal = 200;
 
-	private static List<Integer> list = new CopyOnWriteArrayList<>();
+	private static Map<Integer, Integer> map = new ConcurrentHashMap<>();
 
 	public static void main(String[] args) throws Exception {
 		ExecutorService executorService = Executors.newCachedThreadPool();
@@ -41,11 +44,11 @@ public class LongAdderExample {
 		}
 		countDownLatch.await();
 		executorService.shutdown();
-		System.out.println(list.size());
+		System.out.println(map.size());
 	}
 
 	private static void update(int i) {
-		list.add(i);
+		map.put(i, i);
 	}
 
 
