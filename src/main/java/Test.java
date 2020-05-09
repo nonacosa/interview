@@ -9,6 +9,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 /**
  * @author wenda.zhuang
@@ -17,39 +18,31 @@ import java.util.concurrent.Semaphore;
  * @E-mail sis.nonacosa@gmail.com
  */
 public class Test {
-	// 请求总数
-	public static int clientTotal = 5000;
 
-	// 同时并发执行的线程数
-	public static int threadTotal = 200;
+	private static AtomicIntegerFieldUpdater<Test> updater =
+			AtomicIntegerFieldUpdater.newUpdater(Test.class, "count");
 
-	private static Map<Integer, Integer> map = new ConcurrentHashMap<>();
 
-	public static void main(String[] args) throws Exception {
-		ExecutorService executorService = Executors.newCachedThreadPool();
-		final Semaphore semaphore = new Semaphore(threadTotal);
-		final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
-		for (int i = 0; i < clientTotal; i++) {
-			final int count = i;
-			executorService.execute(() -> {
-				try {
-					semaphore.acquire();
-					update(count);
-					semaphore.release();
-				} catch (Exception e) {
+	public volatile int count = 100;
 
-				}
-				countDownLatch.countDown();
-			});
+	public int getCount() {
+		return this.count;
+	}
+	public static void main(String[] args) {
+
+		Test example5 = new Test();
+
+		if (updater.compareAndSet(example5, 100, 120)) {
+			System.out.println("111111");
+			System.out.println(example5.getCount());
 		}
-		countDownLatch.await();
-		executorService.shutdown();
-		System.out.println(map.size());
-	}
 
-	private static void update(int i) {
-		map.put(i, i);
+		if (updater.compareAndSet(example5, 100, 120)) {
+			System.out.println("2222222");
+			System.out.println(example5.getCount());
+		} else {
+			System.out.println("failed");
+		}
 	}
-
 
 }

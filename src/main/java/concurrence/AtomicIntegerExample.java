@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @E-mail   sis.nonacosa@gmail.com
  */
 
-public class AtomicExample {
+public class AtomicIntegerExample {
 
 	private static AtomicInteger atomicInteger = new AtomicInteger(0);
 
