@@ -1,3 +1,5 @@
+package concurrence;
+
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
@@ -19,6 +21,7 @@ public class CopyOnWriteArrayListExample {
 	// 同时并发执行的线程数
 	public static int threadTotal = 200;
 
+	// 当然还有相似的： CopyOnWriteArraySet  不再赘述了
 	private static List<Integer> list = new CopyOnWriteArrayList<>();
 
 	public static void main(String[] args) throws Exception {
