@@ -36,6 +36,11 @@ public class LinkedHashMapExample<K,V> extends LinkedHashMap<K,V> {
 
 	}
 
+	/**
+	 * 重写此处的 remove 逻辑，否则进行 hash 扩容
+	 * @param eldest
+	 * @return
+	 */
 	@Override
 	protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
 		return size() > size;
