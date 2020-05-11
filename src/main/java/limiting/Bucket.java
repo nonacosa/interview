@@ -96,7 +96,7 @@ public class Bucket {
 	}
 
 
-	
+
 	public static void main(String[] args) {
 		final Bucket bucket = new Bucket();
 		final AtomicInteger DATA_CREATOR = new AtomicInteger(0);
