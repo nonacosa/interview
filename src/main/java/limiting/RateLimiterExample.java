@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class RateLimiterExample {
 
 	public static void main(String[] args) {
-		// permitsPerSecond 每秒发放的许可数量
+		// permitsPerSecond 每秒发放的许可数量，当然也可以选择使用 JDK 的 Semaphore
 		RateLimiter rateLimiter = RateLimiter.create(3.0);
 
 		//重复使用固定数量的线程，多余的排队
