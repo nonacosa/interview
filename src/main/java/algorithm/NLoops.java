@@ -27,17 +27,18 @@ public class NLoops {
 	}
 
  	public static void dfs(int[] nums, int level,List<Integer> temp ) {
-
+		System.out.println("dfs");
 		if( level == nums.length) {
 			resultList.add(new ArrayList<>(temp));
 			return;
 		}
 
-		System.out.println(level);
+//		System.out.println(level);
 
 		for (int i = 0; i < nums[level]; i++) {
 			temp.add(i);
 			dfs(nums,level + 1,temp);
+			System.out.println("after");
 			temp.remove(level);
 		}
 	}
