@@ -16,7 +16,7 @@ public class ReverseString {
 
 	//最前和最后依次调换位置，记录指针即可,递归法
 	public static void reverse(char[] str,int index) {
-		if(index == str.length -1) {
+		if(index == str.length /2 ) {
 			System.out.println(str);
 			return;
 		}
