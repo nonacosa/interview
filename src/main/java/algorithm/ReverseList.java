@@ -1,7 +1,7 @@
 package algorithm;
 
 
-import javax.sound.midi.Soundbank;
+import org.w3c.dom.NodeList;
 
 /**
  * @author wenda.zhuang
@@ -18,14 +18,19 @@ public class ReverseList {
 	}
 
 	public static ListNode reverseList(ListNode head) {
-		if(head == null) {
-			return head;
-		}
+		 if(head == null) {
+		 	return null;
+		 }
 
-		ListNode first = head;
-		head = reverseList(head.next);
-		System.out.println("sss");
-		return head;
+		 ListNode pre = null;
+		 ListNode next = null;
+		 while (head != null) {
+		 	next = head.next;
+			 head.next = pre;
+			 pre = head;
+			 head = next;
+		 }
+		 return pre;
 	}
 
 	public static void main(String[] args) {
