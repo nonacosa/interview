@@ -1,7 +1,6 @@
 package algorithm;
 
 
-import org.w3c.dom.NodeList;
 
 /**
  * @author wenda.zhuang
@@ -23,13 +22,23 @@ public class ReverseList {
 		 }
 
 		 ListNode pre = null;
-		 ListNode next = null;
+		/**
+		 * 一定要缓存下一个节点，否则下一次找 next 节点又回到 1，缓存 head.next 方便找到真正的 head.next.next
+		 * 1 -> 2 -> 3
+		 * 1 <- 2 -> 3
+		 *
+		 */
+		 ListNode nextTemp = null;
 		 while (head != null) {
-		 	next = head.next;
+			 //缓存
+			 nextTemp = head.next;
+			 //翻转下个节点指针，并且修改 pre
 			 head.next = pre;
 			 pre = head;
-			 head = next;
+			 //while 下一个
+			 head = nextTemp;
 		 }
+		 //返回翻转的结果
 		 return pre;
 	}
 
