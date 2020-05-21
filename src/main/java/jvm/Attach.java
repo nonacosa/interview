@@ -16,8 +16,8 @@ import java.io.IOException;
 public class Attach {
 
 	public static void main(String[] args) throws Exception {
-		VirtualMachine vm = VirtualMachine.attach("69128");
-		System.out.println(vm);
+//		VirtualMachine vm = VirtualMachine.attach("69128");
+//		System.out.println(vm);
 
 		//获取到所有 JVM PID
 		for (VirtualMachineDescriptor descriptor : VirtualMachine.list()){
