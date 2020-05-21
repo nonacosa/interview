@@ -10,6 +10,11 @@ import java.util.Map;
 public class Test {
 
 	public static void main(String[] args) {
-		Map a = new HashMap(3);
+		int a = 5;
+		int b = 6;
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+		System.out.println("a :" + a + " b : " + b);
 	}
 }
