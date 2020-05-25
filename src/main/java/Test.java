@@ -17,6 +17,8 @@ public class Test {
 		a = a ^ b;
 		System.out.println("a :" + a + " b : " + b);
 
-		System.out.println(3 >>> 16);
+		System.out.println(2000000000 + 147483647);
+		System.out.println(2000000000 + 147483648);
+		System.out.println(66688 & 5822);
 	}
 }
