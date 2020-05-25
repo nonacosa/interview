@@ -16,5 +16,7 @@ public class Test {
 		b = a ^ b;
 		a = a ^ b;
 		System.out.println("a :" + a + " b : " + b);
+
+		System.out.println(3 >>> 16);
 	}
 }
