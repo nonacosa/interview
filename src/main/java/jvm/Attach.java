@@ -1,11 +1,9 @@
 package jvm;
 
 
-import com.sun.tools.attach.AttachNotSupportedException;
 import com.sun.tools.attach.VirtualMachine;
 import com.sun.tools.attach.VirtualMachineDescriptor;
 
-import java.io.IOException;
 
 /**
  * @author wenda.zhuang
