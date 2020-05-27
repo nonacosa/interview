@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.Arrays;
+
 /**
  * @author wenda.zhuang
  * @Date 2020/5/22 00:12
@@ -9,6 +11,8 @@ package algorithm;
 public class CheckInclusion {
 
 	public static boolean checkInclusion(String s1, String s2) {
+		s1 = sort(s1);
+		s2 = sort(s2);
 		boolean result;
 
 		if(s1 == "" || s1.equals(s2)) return true;
@@ -33,6 +37,11 @@ public class CheckInclusion {
 		return false;
 	}
 
+	public static String sort(String s) {
+		char[] sArr = s.toCharArray();
+		Arrays.sort(sArr);
+		return new String(sArr);
+	}
 	public static void main(String[] args) {
 		System.out.println(checkInclusion("ab","ba"));;
 	}

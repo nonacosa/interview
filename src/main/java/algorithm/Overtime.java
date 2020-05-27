@@ -4,9 +4,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.IntStream;
 
@@ -25,7 +23,6 @@ import java.util.stream.IntStream;
  */
 public class Overtime {
 
-	private static Map<Integer,String> cache = new HashMap();
 
 	public static void main(String[] args) {
 		System.out.println(Integer.parseInt("01"));
@@ -33,7 +30,7 @@ public class Overtime {
 		time.add(new String[]{"09:00","11:00"});
 		time.add(new String[]{"12:00","15:00"});
 		time.add(new String[]{"16:00","18:00"});
-		new Overtime().overTime(time,new String[]{"11:38","15:25"});
+		new Overtime().overTime(time,new String[]{"09:38","18:00"});
 	}
 
 	public List<String[]> overTime(List<String[]> time,String[] workTime){
@@ -47,7 +44,7 @@ public class Overtime {
 
 		Sets.SetView<Integer> diff = Sets.difference(workSet,timeSet );
 		for (Integer temp : diff) {
-			res.add(new String[]{cache.getOrDefault(temp,temp + ":00"), temp < 23 ? cache.getOrDefault(temp + 1,temp + 1 + ":00") :  "00:00"});
+			res.add(new String[]{temp + ":00", temp < 23 ? temp + 1 + ":00" :  "00:00"});
 		}
 		return res;
 	}
@@ -78,7 +75,6 @@ public class Overtime {
 		for (int i = 0; i < workTime.length; i++) {
 			Preconditions.checkState(workTime[i].contains(":"),"传入的上班时间数组格式有误！");
 			temp[i ] = Integer.parseInt(workTime[i].split(":")[0]);
-			cache.putIfAbsent(Integer.parseInt(workTime[i].split(":")[0]),workTime[i]);
 		}
 		Integer[] ret = IntStream.rangeClosed(temp[0], temp[1] - 1).boxed().toArray(Integer[]::new);
 
