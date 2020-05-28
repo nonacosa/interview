@@ -35,6 +35,7 @@ public class RemoveNthFromEnd {
 	}
 
 	public static void main(String[] args) {
+
 	  	ListNode node = new ListNode(1);
 	  	node.next = new ListNode(2);
 	  	node.next.next = new ListNode(3);
