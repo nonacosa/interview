@@ -20,5 +20,15 @@ public class Test {
 		System.out.println(2000000000 + 147483647);
 		System.out.println(2000000000 + 147483648);
 		System.out.println(66688 & 5822);
+
+		Integer aa = 1;
+		Double bb = 1.0;
+		if(aa instanceof Integer) {
+			Double.parseDouble(String.valueOf(aa));
+		} else {
+			Double.parseDouble(String.valueOf(bb));
+		}
+
+
 	}
 }
