@@ -1,6 +1,5 @@
 package algorithm;
 
-import sun.jvm.hotspot.memory.Dictionary;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,8 +1,6 @@
 package jvm;
 
 
-import com.sun.tools.attach.VirtualMachine;
-import com.sun.tools.attach.VirtualMachineDescriptor;
 
 
 /**
@@ -17,11 +15,11 @@ public class Attach {
 //		VirtualMachine vm = VirtualMachine.attach("69128");
 //		System.out.println(vm);
 
-		//获取到所有 JVM PID
-		for (VirtualMachineDescriptor descriptor : VirtualMachine.list()){
-
-			System.out.println(descriptor.id());
-			System.out.println(descriptor.displayName());
-		}
+//		//获取到所有 JVM PID
+//		for (VirtualMachineDescriptor descriptor : VirtualMachine.list()){
+//
+//			System.out.println(descriptor.id());
+//			System.out.println(descriptor.displayName());
+//		}
 	}
 }

@@ -1,7 +1,5 @@
 package concurrence;
 
-import sun.jvmstat.perfdata.monitor.CountedTimerTask;
-import sun.jvmstat.perfdata.monitor.PerfStringConstantMonitor;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
