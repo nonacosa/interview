@@ -1,72 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4"> 
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8"> 
-    <output url="file://$MODULE_DIR$/target/classes"/>  
-    <output-test url="file://$MODULE_DIR$/target/test-classes"/>  
-    <content url="file://$MODULE_DIR$"> 
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false"/>
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true"/>
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false"/>
-      <excludeFolder url="file://$MODULE_DIR$/target"/>
-    </content>  
-    <orderEntry type="inheritedJdk"/>  
-    <orderEntry type="sourceFolder" forTests="false"/>  
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project"/>  
-    <orderEntry type="library" name="Maven: com.google.guava:guava:22.0" level="project"/>  
-    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:1.3.9" level="project"/>  
-    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.0.18" level="project"/>  
-    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.1" level="project"/>  
-    <orderEntry type="library" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.14" level="project"/>  
-    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.6" level="project"/>  
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.6" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/com/google/guava/guava/22.0/guava-22.0.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/22.0/guava-22.0.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///Users/Venda-GM/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/"/>
+          <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/" />
         </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
-  </component> 
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:22.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:1.3.9" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.0.18" level="project" />
+    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.14" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.6" level="project" />
+  </component>
 </module>
