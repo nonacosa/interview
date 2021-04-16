@@ -37,7 +37,7 @@ public class StreamTest {
 		Stream<String> stream5 = Stream.of("A$B$C".split("\\$"));
 		stream5.forEach(p -> System.out.println(p));
 
-		System.out.println("=========");
+		System.out.println("====filter=====");
 
 		// list -> stream -> filter -> list
 		List<Integer> list = new ArrayList<Integer>();
@@ -61,7 +61,7 @@ public class StreamTest {
 		Stream<Integer> stream7 = list2.stream();
 		Integer[] evenNumbersArr2 = stream7.filter(i -> i%2 == 0).toArray(Integer[]::new);
 		System.out.println(evenNumbersArr2);
-
+		System.out.println(stream7);
 
 
 		System.out.println("=========");

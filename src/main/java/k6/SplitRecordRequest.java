@@ -18,7 +18,7 @@ import lombok.SneakyThrows;
  */
 public class SplitRecordRequest {
 	// your path
-	public static final String K6_JS_PATH = "/Users/Venda-GM/Desktop/git-company/benchmark/project/project.js";
+	public static final String K6_JS_PATH = "/Users/Venda-GM/Desktop/git-company/benchmark/projectFolder/projectFolder.js";
 
 	public static final String REQ_SPL_SYMBOL = "},\n" + "        }\n" + "      \\);";
 	public static final String FUN_START_SYMBOL = "function () {";
@@ -43,7 +43,10 @@ public class SplitRecordRequest {
 			else {
 				req =   req.concat("},\n" + "        }\n" + "      );");
 			}
-			saveRequestFile(req.replace("response","var response").replace("https://www.qmenhu.com","http://localhost:10121"));
+			saveRequestFile(req.replace("response","var response")
+					.replace("https://www.qmenhu.com","http://localhost:10121")
+					.replace("http://www.qmenhu.com","http://localhost:10121")
+			);
 		}
 
 	}
