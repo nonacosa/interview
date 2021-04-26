@@ -17,6 +17,7 @@ public class CountSynchronizedExample {
 	private volatile static int count2 = 0;
 
 	public static void main(String[] args) throws Exception {
+
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		Semaphore semaphore = new Semaphore(200);
 		CountDownLatch countDownLatch = new CountDownLatch(100000);
