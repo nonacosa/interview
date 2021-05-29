@@ -20,9 +20,9 @@ public class Ip2Int {
 	public static String int2Ip(int ipInt) {
 		StringBuffer sb = new StringBuffer();
 
-		return sb.append((ipInt >>24 & 255) + ".")
-			     .append((ipInt >>16 & 255) + ".")
-			     .append((ipInt >>8  & 255) + ".")
+		return sb.append((ipInt >> 24 & 255) + ".")
+			     .append((ipInt >> 16 & 255) + ".")
+			     .append((ipInt >> 8  & 255) + ".")
 			     .append((ipInt & 255)).toString();
 	}
 

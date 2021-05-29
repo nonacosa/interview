@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author wenda.zhuang
@@ -20,6 +21,7 @@ public class HashMapExample {
 		b[1] = Integer.valueOf(42);
 		System.out.println(a);
 		System.out.println(b);
+
 	}
 
 	/**
